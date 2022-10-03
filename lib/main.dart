@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'See_9ja',
       theme: ThemeData(accentColor: lightGreen),
-      //home: SplashScreen(),
-      home: Dashboard(),
+      home: SplashScreen(),
+      //home: Dashboard(),
 
       //initialRoute: Dashboard.id,
       // routes: {
