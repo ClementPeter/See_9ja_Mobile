@@ -161,21 +161,8 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 40.0),
-            //verticalSpaceRegular,
-            //if (validationMessage != null)
-            // BoxText.body(
-            //   validationMessage!,
-            //   color: Colors.red,
-            // ),
-            // const Text('WTF is hereeee'
-            //     //validationMessage,
-            //     //color: Colors.red,
-            //     ),
-            //if (validationMessage != null) verticalSpaceRegular,
+
             GestureDetector(
-              onTap: () {
-                PageNavigator(ctx: context).nextPage(page: Dashboard());
-              },
               child: Container(
                 width: double.infinity,
                 height: 50,
@@ -199,14 +186,14 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              onTap: () {
+                PageNavigator(ctx: context).nextPage(page: Dashboard());
+              },
             ),
             //verticalSpaceRegular,
             const SizedBox(height: 18.0),
-            //if (onCreateAccountTapped != null)
+
             GestureDetector(
-              onTap: () {
-                PageNavigator(ctx: context).nextPage(page: RegisterScreen());
-              },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -222,6 +209,9 @@ class LoginScreen extends StatelessWidget {
                   )
                 ],
               ),
+              onTap: () {
+                PageNavigator(ctx: context).nextPage(page: RegisterScreen());
+              },
             ),
             //if (showTermsText)
             // BoxText.body(

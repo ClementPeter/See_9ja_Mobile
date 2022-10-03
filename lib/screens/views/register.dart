@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 //import 'package:auth_buttons/auth_buttons.dart';
 //import 'package:google_fonts/google_fonts.dart';
@@ -58,6 +57,7 @@ class RegisterScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: ListView(
+          // physics: ScrollPhysics.,
           children: [
             IconButton(
               padding: EdgeInsets.zero,
@@ -230,7 +230,8 @@ class RegisterScreen extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
-                    fontSize: 14,
+                    fontSize: 15,
+                    letterSpacing: 3.0,
                   ),
                 ),
               ),
@@ -306,4 +307,3 @@ class RegisterScreen extends StatelessWidget {
     );
   }
 }
-

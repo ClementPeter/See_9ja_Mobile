@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:dots_indicator/dots_indicator.dart';
-//import 'package:see_9ja_/screens/views/login.dart';
+import 'package:see_9ja/screens/views/login.dart';
 import 'package:see_9ja/styles/colors.dart';
 import 'package:see_9ja/screens/views/pageView.dart';
 import 'package:see_9ja/utils/router.dart';
 import 'package:see_9ja/screens/authentication/login.dart';
-//lib\screens\authentication\login.dart
 
-//Intro Screen shows a Page View of different toursit attraction and their brief
+//Intro Screen shows a Page View of different tourist attraction and their brief
 class Intro extends StatefulWidget {
   const Intro({Key? key}) : super(key: key);
   //
@@ -175,7 +174,8 @@ class _IntroState extends State<Intro> {
                           //Navigator.pushNamed(context, LoginScreen.id);
                           print(' Login');
                           PageNavigator(ctx: context).nextPage(
-                            page: const LoginPage(),
+                            // page: const LoginPage(),
+                             page:  LoginScreen(),
                           );
                         },
                         child: Container(
@@ -204,4 +204,3 @@ class _IntroState extends State<Intro> {
     );
   }
 }
-

@@ -41,7 +41,6 @@ class _SplashScreenState extends State<SplashScreen> {
   //Navigate to Intro Screen PageView
   void _navigatetointro() async {
     await Future.delayed(const Duration(milliseconds: 1500), () {});
-
     PageNavigator(ctx: context).nextPageOnly(page: const Intro());
 
     // Navigator.pushReplacement(

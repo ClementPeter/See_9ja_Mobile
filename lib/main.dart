@@ -16,7 +16,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'See_9ja',
-      theme: ThemeData(accentColor: lightGreen),
+      theme: ThemeData(
+        //  accentColor: lightGreen,
+        colorScheme: ColorScheme.fromSwatch(
+          accentColor: lightGreen, // but now it should be declared like this
+        ),
+      ),
       home: SplashScreen(),
       //home: Dashboard(),
 

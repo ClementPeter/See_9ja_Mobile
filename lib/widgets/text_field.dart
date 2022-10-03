@@ -42,13 +42,3 @@ Widget customTextField({
     ],
   );
 }
-
-
-    //  Expanded(
-    //                 child: customTextField(
-    //                   title: '',
-    //                   controller: _searchController,
-    //                   hint: 'search places',
-    //                 ),
-    //               ),
-
