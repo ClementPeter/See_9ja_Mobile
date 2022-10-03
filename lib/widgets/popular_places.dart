@@ -66,11 +66,7 @@ class _PopularPlacesState extends State<PopularPlaces> {
                 const Text("Abeokuta ,Ogun state"),
               ],
             ),
-            // Row(
-            //   children: [
-            //     const SizedBox(height: 10.0),
-            //   ],
-            // )
+      
           ],
         ),
       ),

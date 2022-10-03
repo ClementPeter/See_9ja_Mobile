@@ -1,4 +1,3 @@
-
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
 //import 'package:google_fonts/google_fonts.dart';
@@ -39,40 +38,45 @@ class ChildWidget extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(top: 40.0, left: 8.0, right: 8.0),
         child: Column(
-          //mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            const SizedBox(height: 40.0),
+            // const SizedBox(height: 40.0),
             Flexible(
+              //flex: 5,
               child: SizedBox(
-                height: 290,
-                width: 290,
+                height: 300,
+                width: 300,
                 child: Image.asset("images/$file.png"),
               ),
             ),
-            Text(
-              description,
-              // style: GoogleFonts.poppins(
-              style: const TextStyle(
-                color: Color(0XFF008B2C),
-                fontSize: 24.0,
-                letterSpacing: .5,
-              ),
-              // ),
-              textAlign: TextAlign.center,
+            //const SizedBox(height: 50.0),
+            Column(
+              children: [
+                Text(
+                  description,
+                  // style: GoogleFonts.poppins(
+                  style: const TextStyle(
+                    color: Color(0XFF008B2C),
+                    fontSize: 24.0,
+                    letterSpacing: 0.5,
+                  ),
+                  // ),
+                  textAlign: TextAlign.center,
+                ),
+                Text(
+                  subDescription,
+                  style: const TextStyle(
+                    fontSize: 18.0,
+                    letterSpacing: 0.5,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ],
             ),
-            const SizedBox(height: 20.0),
-            Text(
-              subDescription,
-              style: const TextStyle(
-                fontSize: 18.0,
-                letterSpacing: .5,
-              ),
-              textAlign: TextAlign.center,
-            ),
+            //const SizedBox(height: 20.0),
           ],
         ),
       ),
     );
   }
 }
-

@@ -32,10 +32,8 @@ class _CategoryWidgetState extends State<CategoryWidget> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              //margin: const EdgeInsets.only(right: 20),
               height: 100,
               width: 100,
-              // padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 //image: Image(image: AssetImage(image)),
                 color: widget.color,

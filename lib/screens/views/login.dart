@@ -139,24 +139,13 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
             ),
-            // TextField(
-            //   decoration: InputDecoration(
-            //     //border: OutlineInputBorder(),
-            //     border: OutlineInputBorder(
-            //       borderRadius: BorderRadius.circular(25.0),
-            //       //borderSide:  BorderSide(                         ),
-            //     ),
-            //     //hintText: 'Enter a search term',
-            //   ),
-            // ),
-            // //TextField(),
-            //Form,
+       
             const SizedBox(height: 18.0),
             Align(
               alignment: Alignment.centerRight,
               child: GestureDetector(
                 child: const Text(
-                  'Forgot Password?',
+                  'Forgot Password ?',
                 ),
               ),
             ),

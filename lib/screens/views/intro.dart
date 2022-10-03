@@ -79,9 +79,7 @@ class _IntroState extends State<Intro> {
 
       body: Stack(
         children: [
-          // Scaffold(
-          //   backgroundColor: Colors.transparent,
-          // ),
+        
           PageView(
             controller: _pageController,
             onPageChanged: (page) {

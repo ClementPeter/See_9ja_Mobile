@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           accentColor: lightGreen, // but now it should be declared like this
         ),
       ),
-      home: SplashScreen(),
+      home: const SplashScreen(),
       //home: Dashboard(),
 
       //initialRoute: Dashboard.id,

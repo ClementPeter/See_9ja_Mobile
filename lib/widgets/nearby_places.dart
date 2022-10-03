@@ -33,10 +33,8 @@ class _NearbyPlacesState extends State<NearbyPlaces> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              //margin: const EdgeInsets.only(right: 20),
               height: 100,
               width: 150,
-              // padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 //image: Image(image: AssetImage(image)),
                 color: widget.color,
@@ -47,7 +45,6 @@ class _NearbyPlacesState extends State<NearbyPlaces> {
               ),
             ),
             Container(
-              //margin: const EdgeInsets.only(right: 20),
               height: 30,
               width: 150,
               // padding: const EdgeInsets.all(10),
@@ -57,7 +54,6 @@ class _NearbyPlacesState extends State<NearbyPlaces> {
                     bottomRight: Radius.circular(10.0)),
                 //image: Image(image: AssetImage(image)),
                 color: widget.color,
-                // borderRadius: BorderRadius.circular(20),
               ),
             ),
             Column(

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:see_9ja/styles/colors.dart';
 //import 'package:todo_provider_rest_api/styles/colors.dart';
@@ -26,7 +25,7 @@ Widget customTextField({
       //TextField Section
       Container(
         alignment: Alignment.centerLeft,
-        //margin: const EdgeInsets.symmetric(vertical: 20),
+
         padding: const EdgeInsets.symmetric(horizontal: 10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),

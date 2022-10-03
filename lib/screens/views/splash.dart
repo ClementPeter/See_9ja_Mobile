@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:see_9ja/screens/views/intro.dart';
 import 'package:see_9ja/utils/router.dart';
-//import 'package:see_9ja_/views/intro.dart';
 
 //App Splash Screeen that displays App Name and Logo
 class SplashScreen extends StatefulWidget {
@@ -40,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   //Navigate to Intro Screen PageView
   void _navigatetointro() async {
-    await Future.delayed(const Duration(milliseconds: 1500), () {});
+    await Future.delayed(const Duration(milliseconds: 2000), () {});
     PageNavigator(ctx: context).nextPageOnly(page: const Intro());
 
     // Navigator.pushReplacement(
