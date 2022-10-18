@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:dots_indicator/dots_indicator.dart';
-import 'package:see_9ja/screens/views/login.dart';
+import 'package:see_9ja/screens/authentication/login.dart';
 import 'package:see_9ja/styles/colors.dart';
 import 'package:see_9ja/screens/views/pageView.dart';
 import 'package:see_9ja/utils/router.dart';
-import 'package:see_9ja/screens/authentication/login.dart';
+import 'package:see_9ja/screens/authentication/sign_in.dart';
 
 //Intro Screen shows a Page View of different tourist attraction and their brief
 class Intro extends StatefulWidget {
@@ -79,7 +79,6 @@ class _IntroState extends State<Intro> {
 
       body: Stack(
         children: [
-        
           PageView(
             controller: _pageController,
             onPageChanged: (page) {
@@ -168,14 +167,6 @@ class _IntroState extends State<Intro> {
                       // ),
                       const SizedBox(height: 20.0),
                       GestureDetector(
-                        onTap: () {
-                          //Navigator.pushNamed(context, LoginScreen.id);
-                          print(' Login');
-                          PageNavigator(ctx: context).nextPage(
-                            // page: const LoginPage(),
-                             page:  LoginScreen(),
-                          );
-                        },
                         child: Container(
                           height: 44.0,
                           child: Center(
@@ -190,6 +181,14 @@ class _IntroState extends State<Intro> {
                             borderRadius: BorderRadius.circular(8),
                           ),
                         ),
+                        onTap: () {
+                          //Navigator.pushNamed(context, LoginScreen.id);
+                          print(' Login');
+                          PageNavigator(ctx: context).nextPage(
+                            // page: const LoginPage(),
+                            page: LoginScreen(),
+                          );
+                        },
                       ),
                     ],
                   ),

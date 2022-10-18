@@ -19,6 +19,8 @@ class Dashboard extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
   final TextEditingController _searchController = TextEditingController();
 
+  Dashboard({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -352,14 +354,7 @@ class Dashboard extends StatelessWidget {
                         ),
                         const SizedBox(height: 10.0),
 
-                        ///
-                        //////
-
-                        ////
-                        ///
-                        ///
-                        ///
-                        // ///
+        
                       ],
                     ),
                   ),

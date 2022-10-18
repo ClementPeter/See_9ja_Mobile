@@ -1,145 +1,280 @@
-
 import 'package:flutter/material.dart';
+//import 'package:auth_buttons/auth_buttons.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:see_9ja/screens/dashboard/dashboard.dart';
+import 'package:see_9ja/screens/authentication/register.dart';
+import 'package:see_9ja/styles/colors.dart';
 import 'package:see_9ja/utils/router.dart';
-//import 'package:see_9ja/utils/router.dart';
-import 'package:see_9ja/utils/snack_message.dart';
-import 'package:see_9ja/widgets/button.dart';
-import 'package:see_9ja/widgets/text_field.dart';
-// import 'package:provider/provider.dart';
-// import 'package:todo_provider_rest_api/providers/auth_provider/auth_provider.dart';
-// import 'package:todo_provider_rest_api/screens/authentication/register.dart';
-// import 'package:todo_provider_rest_api/utils/router.dart';
-// import 'package:todo_provider_rest_api/utils/snack_message.dart';
-// import 'package:todo_provider_rest_api/widgets/button.dart';
-// import 'package:todo_provider_rest_api/widgets/text_field.dart';
-//Login Page will contain 2 textfield w
+import 'package:see_9ja/widgets/social_card.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+// import 'dart:io';
 
-  @override
-  State<LoginPage> createState() => _LoginPageState();
-}
+//import 'package:box_ui/box_ui.dart';
 
-class _LoginPageState extends State<LoginPage> {
-  //TextEdiitnng Controllers for our username and Password field...we make them private varialbe with (_) so they cant be accessed form another class
-  final TextEditingController _email = TextEditingController();
-  final TextEditingController _password = TextEditingController();
+class LoginScreen extends StatelessWidget {
+  //const RegistrationScreen({ Key? key }) : super(key: key);
+  //
+  static String id = "Login_screen";
 
-  //Dispose method is used to dispoise contrrollers after use
+  LoginScreen({Key? key}) : super(key: key);
+  //
+  // final String title;
+  // final String subtitle;
+  // final String mainButtonTitle;
+  // final Widget form;
+  // final bool showTermsText;
+  // final void Function() onMainButtonTapped;
+  // final void Function() onCreateAccountTapped;
+  // final void Function() onForgotPassword;
+  // final void Function() onBackPressed;
+  // final void Function() onSignInWithApple;
+  // final void Function() onSignInWithGoogle;
+  // final String validationMessage;
+  // final bool busy;
 
-  @override
-  void dispose() {
-    /// TODO: implement dispose
-    _email.dispose();
-    _password.dispose();
-    // print('login page disposed');
-    super.dispose();
-  }
+  // const LoginScreen({
+  //   Key key,
+  //   this.title,
+  //   this.subtitle,
+  //   this.mainButtonTitle,
+  //   this.form,
+  //   this.onMainButtonTapped,
+  //   this.onCreateAccountTapped,
+  //   this.onForgotPassword,
+  //   this.onBackPressed,
+  //   this.onSignInWithApple,
+  //   this.onSignInWithGoogle,
+  //   this.validationMessage,
+  //   this.showTermsText = false,
+  //   this.busy = false,
+  // }) : super(key: key);
+
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: primaryColor,
-      appBar: AppBar(centerTitle: true, title: const Text('Login')),
-      //CustomScrollView is used to get custom scroll effect using Slivers
-      body: CustomScrollView(
-        //list of slivers
-        slivers: [
-          //In order not nest other widgets we use sliver to box adapter
-          SliverToBoxAdapter(
-            child: Container(
-              // color: amber,
-              padding: const EdgeInsets.all(15),
-              child: Column(
-                children: [
-                  //email textfield
-                  customTextField(
-                    title: 'Email',
-                    hint: 'Enter your Email',
-                    controller: _email,
-                  ),
-                  //password Textfield
-                  customTextField(
-                    title: 'Password',
-                    hint: 'Enter your password',
-                    controller: _password,
-                  ),
-                  customButton(
-                    text: 'Login',
-                    tap: () {
-                      //Manual textfield validator
-                      if (_email.text.isEmpty || _password.text.isEmpty) {
-                        showMessage(
-                            message: 'Please fill all the fields for Login',
-                            context: context);
-                      } else {
-                        PageNavigator(ctx: context).nextPage(page: Dashboard());
-                        // auth.loginUser(
-                        //   email: _email.text.trim(),
-                        //   password: _password.text.trim(),
-                        // );
-                      }
-                    },
-                    context: context,
-                    //status: auth.isLoading,
-                  ),
-
-                  //)
-                  //Custom Button
-                  // Consumer<AuthenticationProvider>(
-                  //   //builder accept a created object of the provider used
-                  //   builder: (context, auth, child) {
-                  //     //Prevents the consumer form contanstly checking  & diplays the response message we use the following logic
-                  //     WidgetsBinding.instance!.addPostFrameCallback((_) {
-                  //       if (auth.responseMessage != " ") {
-                  //         showMessage(
-                  //           message: auth.responseMessage.toUpperCase(),
-                  //           context: context,
-                  //         );
-                  //         auth.clear();
-                  //       }
-                  //     });
-                  //     return customButton(
-                  //       text: 'Login',
-                  //       tap: () {
-                  //         //Manual textfield validator
-                  //         if (_email.text.isEmpty || _password.text.isEmpty) {
-                  //           showMessage(
-                  //               message: 'Please fill all the fields for Login',
-                  //               context: context);
-                  //         } else {
-                  //           auth.loginUser(
-                  //             email: _email.text.trim(),
-                  //             password: _password.text.trim(),
-                  //           );
-                  //         }
-                  //       },
-                  //       context: context,
-                  //       status: auth.isLoading,
-                  //     );
-                  //   },
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: ListView(
+          children: [
+            //Back button not working for some reason
+            // IconButton(
+            //   padding: EdgeInsets.zero,
+            //   alignment: Alignment.centerLeft,
+            //   icon: const Icon(
+            //     Icons.arrow_back_ios,
+            //     color: Colors.black,
+            //   ),
+            //   //onPressed: onBackPressed,
+            //   onPressed: () {
+            //     Navigator.pop(context);
+            //   },
+            // ),
+            const Text(
+              "Welcome_loginnnn",
+              style: TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            const SizedBox(height: 10.0),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: SizedBox(
+                width: 400.0,
+                child: Text(
+                  'Enter your email and password',
+                  // style: TextStyle(
+                  //   fontSize: 16.0,
+                  //   //fontWeight: FontWeight.w400,
                   // ),
-                  GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        PageNavigator(ctx: context).nextPage(page: Dashboard());
-                      });
-                    },
-                    // onTap: () {
-                    //   PageNavigator(ctx: context)
-                    //       .nextPage(page: const RegisterPage());
-                    // },
-                    child: const Text('Register Instead'),
+                  style: GoogleFonts.poppins(
+                    textStyle: const TextStyle(
+                      //color: Color(0XFFFCFAFF),
+                      fontSize: 22.0,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 18.0),
+            //Email section
+            TextField(
+              controller: _emailController,
+              decoration: InputDecoration(
+                hintText: 'Email',
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(color: grey),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                  borderSide: BorderSide(color: green),
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 18.0),
+            //Password Section
+            TextField(
+              controller: _passwordController,
+              decoration: InputDecoration(
+                hintText: 'Password',
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(color: grey),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                  borderSide: BorderSide(color: lightGreen),
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 18.0),
+            //Forgot password section
+            Align(
+              alignment: Alignment.centerRight,
+              child: GestureDetector(
+                child: const Text(
+                  'Forgot Password ?',
+                ),
+              ),
+            ),
+            const SizedBox(height: 40.0),
+            //Login Button section
+            GestureDetector(
+              child: Container(
+                width: double.infinity,
+                height: 50,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: green,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child:
+                    //  busy
+                    //     ? CircularProgressIndicator(
+                    //         valueColor: AlwaysStoppedAnimation(Colors.white),
+                    //       )
+                    //     :
+                    const Text(
+                  'Login',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+              onTap: () {
+                PageNavigator(ctx: context).nextPage(page: Dashboard());
+              },
+            ),
+
+            const SizedBox(height: 18.0),
+            //Dont have an account section
+            GestureDetector(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text('Don\'t have an account?'),
+                  //horizontalSpaceTiny,
+                  const SizedBox(width: 5.0),
+                  Text(
+                    'Create an account',
+                    style: TextStyle(
+                      //color: kcPrimaryColor,
+                      color: lightGreen,
+                    ),
                   )
                 ],
               ),
+              onTap: () {
+                PageNavigator(ctx: context).nextPage(page: RegisterScreen());
+              },
             ),
-          )
-        ],
+            //if (showTermsText)
+            // BoxText.body(
+            //   'By signing up you agree to our terms, conditions and privacy policy.',
+            // ),
+            // Text(
+            //   'By signing up you agree to our terms, conditions and privacy policy.',
+            // ),
+            //verticalSpaceRegular,
+            //const SizedBox(height: 18.0),
+
+            // Row(
+            //   children: const [
+            //     Divider(
+            //       height: 3.0,
+            //     )
+            //   ],
+            // ),
+
+            const SizedBox(height: 10.0),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: const [
+            //     Divider(height: 10.0, thickness: 5.0),
+            //     Text('or'),
+            //     Divider(height: 3.0, thickness: 5.0),
+            //   ],
+            // ),
+            const SizedBox(height: 18.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SocalCard(
+                  icon: "assets/icons/google-icon.svg",
+                  press: () {},
+                ),
+                SocalCard(
+                  icon: "assets/icons/facebook-2.svg",
+                  press: () {},
+                ),
+                SocalCard(
+                  icon: "assets/icons/twitter.svg",
+                  press: () {},
+                ),
+              ],
+            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [
+            //     // SvgPicture.asset("images/google.svg",
+            //     //     semanticsLabel: 'Google Logo',),
+            //   ],
+            // ),
+
+            //verticalSpaceRegular,
+
+            // GoogleAuthButton(
+            //   //onPressed: onSignInWithGoogle ?? () {},
+            //   text: 'CONTINUE WITH GOOGLE',
+            //   style: AuthButtonStyle(
+            //     buttonColor: Color(0xff4285F4),
+            //     iconSize: 24,
+            //     iconBackground: Colors.white,
+            //     buttonType: AuthButtonType.secondary,
+            //     height: 50,
+            //     textStyle: TextStyle(color: Colors.white),
+            //   ),
+            // )
+          ],
+        ),
       ),
     );
   }
 }
-
