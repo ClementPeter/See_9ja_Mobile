@@ -3,13 +3,6 @@ import 'package:see_9ja/models/discover_model.dart';
 //Class that Auto dynamically generates a List of Discoveries
 //Represents individual tourism location a user can visit.
 class DiscoverFact {
-  //properties
-  // final int id;
-  // final String name;
-  // final String imagePath;
-  // final String location;
-  //final List<DiscoverModel> facts; //list of location facts
-
   late final List<DiscoverModel> favourite;
 
   static List<DiscoverModel> fetchDiscoveries() {
@@ -60,27 +53,6 @@ class DiscoverFact {
         "Madalla, Niger",
         "Zuma Rock is a large natural monolith  located immediately west of Nigeria's capital Abuja, Zuma is a beautiful, giant of a rock used for defensive purposes by the Gwari natives against invading neighbouring tribes during the inter tribal wars,The iconic images of Zuma Rock appears on the 100 Naira bill (National currency)",
       ),
-      // DiscoverModel(
-      //   3,
-      //   'Olumo Rock',
-      //   'assets/images/olumo.jpg',
-      //   "Abeokuta, Ogun",
-      //   "Olumo Rock is located in the city of Abeokuta, Ogun State. Historically, the rock was a natural fortress for the Egbas during inter-tribal warfare in the 19th century. It provided protection to the Egba people when they needed it, and is now held in high esteem by the members of the clan.The mountain, one of the most popular tourist destinations in Nigeria, sits in the heart of Abeokuta a name which means “Under the rock” in the Yoruba language; it has a height of 137 metres above sea level. Abeokuta was originally inhabited by the Egbas, who the rock provided with sanctuary and gave a vantage point to monitor the enemy’s advance, leading to eventual triumph in war.",
-      // ),
-      // DiscoverModel(
-      //   4,
-      //   'Yankari Game Reserve',
-      //   'assets/images/yankari.jpg',
-      //   "Kaduna, Kaduna ",
-      //   "Yankari has rich and abundant wildlife resources. The park is an important habitat for over 50 species of mammals including African bush elephant, olive baboon, patas monkey, Tantalus monkey, roan antelope, Western hartebeest, West African lion, African buffalo, waterbuck, bushbuck and hippopotamus. It also has a large and diverse freshwater ecosystem around its freshwater springs and the Gaji River. Don’t be surprised when a monkey comes to your window to wake you up early in the morning! There are also over 350 species of bird found in the park. Of these, 130 are resident, 50 are Palearctic migrants and the rest are African migrants that move locally within Nigeria. These birds include the saddle-billed stork, white-rumped vulture, guinea fowl, grey hornbill, and the cattle egret. You can take a safari ride with trained guards for an amazing tour in wildlife, who knows…. you could be lucky enough to spot the African bush elephants! ",
-      // ),
-      // DiscoverModel(
-      //   5,
-      //   'Zuma Rock',
-      //   'assets/images/zuma.jpg',
-      //   "Madalla, Niger",
-      //   "Zuma Rock is a large natural monolith  located immediately west of Nigeria's capital Abuja, Zuma is a beautiful, giant of a rock used for defensive purposes by the Gwari natives against invading neighbouring tribes during the inter tribal wars,The iconic images of Zuma Rock appears on the 100 Naira bill (National currency)",
-      // ),
     ];
   }
 }

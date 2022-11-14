@@ -16,15 +16,6 @@ class MyApp extends StatelessWidget {
       title: 'See_9ja',
       theme: theme(),
       home: const SplashScreen(),
-      //home: Dashboard(),
-      //initialRoute: Dashboard.id,
-      // routes: {
-      //   Splash.id: (context) => const Splash(),
-      //   Intro.id: (context) => const Intro(),
-      //   Dashboard.id: (context) => const Dashboard(),
-      //   //  RegistrationScreen.id: (context) => RegistrationScreen(),
-      //   //LoginScreen.id: (context) => LoginScreen(),
-      // },
     );
   }
 }

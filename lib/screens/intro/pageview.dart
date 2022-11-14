@@ -1,6 +1,4 @@
-// ignore_for_file: file_names
 import 'package:flutter/material.dart';
-//import 'package:google_fonts/google_fonts.dart';
 
 enum ScreenNumber { first, second, third, fourth }
 
@@ -11,14 +9,12 @@ class ChildWidget extends StatelessWidget {
   final ScreenNumber number;
   final String description;
   final String subDescription;
-  //Image image;
 
   // ignore: use_key_in_widget_constructors
   ChildWidget({
     required this.number,
     required this.description,
     required this.subDescription,
-    // required this.image,
   });
 
   @override
@@ -40,21 +36,18 @@ class ChildWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            // const SizedBox(height: 40.0),
             Flexible(
-              //flex: 5,
               child: SizedBox(
                 height: 200,
                 width: 200,
                 child: Image.asset("assets/images/$file.png"),
               ),
             ),
-            //const SizedBox(height: 50.0),
             Column(
               children: [
                 Text(
                   description,
-                  // style: GoogleFonts.poppins(
+
                   style: const TextStyle(
                     color: Color(0XFF008B2C),
                     fontFamily: "Muli",
@@ -75,7 +68,6 @@ class ChildWidget extends StatelessWidget {
                 ),
               ],
             ),
-            //const SizedBox(height: 20.0),
           ],
         ),
       ),

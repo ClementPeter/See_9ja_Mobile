@@ -41,6 +41,10 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   webview_flutter: ^3.0.4
   flutter_tawk: ^0.1.0
+  firebase_core: ^2.1.1
+  firebase_auth: ^4.1.1
+  cloud_firestore: ^4.0.4
+  firebase_storage: ^11.0.4
   
 
 dev_dependencies:

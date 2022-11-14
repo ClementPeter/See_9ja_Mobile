@@ -27,10 +27,13 @@ class _SplashScreenState extends State<SplashScreen> {
           ),
           child: Center(
             child: Column(
-               mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset('assets/images/see9ja.png',
-                    width: 250, height: 250,),
+                Image.asset(
+                  'assets/images/see9ja.png',
+                  width: 250,
+                  height: 250,
+                ),
               ],
             ),
           ),
@@ -43,12 +46,5 @@ class _SplashScreenState extends State<SplashScreen> {
   void _navigatetointro() async {
     await Future.delayed(const Duration(milliseconds: 5000), () {});
     PageNavigator(ctx: context).nextPageOnly(page: const Intro());
-
-    // Navigator.pushReplacement(
-    //   context,
-    //   MaterialPageRoute(
-    //     builder: (context) => const Intro(),
-    //   ),
-    // );
   }
 }

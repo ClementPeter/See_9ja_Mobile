@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-//Utils folders are used to store utility functions that are used in multiple places.
-
+//Utils folders are used to store routing functions that are used in multiple places in the App .
 class PageNavigator {
   BuildContext ctx;
 

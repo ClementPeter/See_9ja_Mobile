@@ -20,27 +20,9 @@ class StarRating extends StatelessWidget {
     icon = Icon(
       Icons.star,
       color: Colors.amber,
-
       size: 15.0,
-      //color: Theme.of(context).buttonColor,
     );
-    //if (index >= rating) {
-    //   icon = Icon(
-    //     Icons.star_border,
-    //     size: 5.0,
-    //     color: Theme.of(context).buttonColor,
-    //   );
-    // } else if (index > rating - 1 && index < rating) {
-    //   icon = Icon(
-    //     Icons.star_half,
-    //     color: color ?? Theme.of(context).primaryColor,
-    //   );
-    // } else {
-    //   icon = Icon(
-    //     Icons.star,
-    //     color: color ?? Theme.of(context).primaryColor,
-    //   );
-    // }
+
     return InkResponse(
       onTap:
           onRatingChanged == null ? null : () => onRatingChanged!(index + 1.0),

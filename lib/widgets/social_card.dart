@@ -1,6 +1,7 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 
+//Custome Wdgets for Social Auth Icons
 class SocalCard extends StatelessWidget {
   const SocalCard({
     Key? key,

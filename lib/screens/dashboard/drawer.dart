@@ -5,11 +5,11 @@ import 'package:see_9ja/screens/assistant/assistant.dart';
 import 'package:see_9ja/screens/commute/commute.dart';
 import 'package:see_9ja/screens/discover/discover.dart';
 import 'package:see_9ja/screens/favourite/favourite.dart';
+import 'package:see_9ja/screens/profile/profile.dart';
 import '../../utils/router.dart';
 
 Drawer drawer(BuildContext context) {
   return Drawer(
-    //backgroundColor: lightGreen,
     child: ListView(
       children: [
         Container(
@@ -42,8 +42,7 @@ Drawer drawer(BuildContext context) {
           title: const Text('Profile'),
           selectedTileColor: lightGreen,
           onTap: () {
-            // PageNavigator(ctx: context).nextPage(page: const Profile());
-            //Navigator.of(context).pushNamed(AddTaskPage.id);
+            PageNavigator(ctx: context).nextPage(page: const Profile());
           },
         ),
         ListTile(
@@ -51,8 +50,6 @@ Drawer drawer(BuildContext context) {
           title: const Text('Discover'),
           onTap: () {
             PageNavigator(ctx: context).nextPage(page: const Discover());
-            // databaseProvider.logOut(context);
-            //AuthProvider.of(context).logout();
           },
         ),
         ListTile(
@@ -60,15 +57,12 @@ Drawer drawer(BuildContext context) {
           title: const Text('Favourite Places'),
           onTap: () {
             PageNavigator(ctx: context).nextPage(page: Favourite());
-            //Navigator.of(context).pushNamed(AddTaskPage.id);
           },
         ),
         ListTile(
           leading: const Icon(Icons.restore_outlined),
           title: const Text('Recently Viewed'),
-          onTap: () {
-            //Navigator.of(context).pushNamed(AddTaskPage.id);
-          },
+          onTap: () {},
         ),
         const Divider(),
         ListTile(
@@ -76,7 +70,6 @@ Drawer drawer(BuildContext context) {
           title: const Text('Accomodation'),
           onTap: () {
             PageNavigator(ctx: context).nextPage(page: const Accomodation());
-            //Navigator.of(context).pushNamed(AddTaskPage.id);
           },
         ),
         ListTile(
@@ -84,7 +77,6 @@ Drawer drawer(BuildContext context) {
           title: const Text('Commute'),
           onTap: () {
             PageNavigator(ctx: context).nextPage(page: const Commute());
-            //Navigator.of(context).pushNamed(AddTaskPage.id);
           },
         ),
         ListTile(
@@ -92,44 +84,33 @@ Drawer drawer(BuildContext context) {
           title: const Text('Tour Assistant'),
           onTap: () {
             PageNavigator(ctx: context).nextPage(page: const AssistantPage());
-            //Navigator.of(context).pushNamed(AddTaskPage.id);
           },
         ),
         const Divider(),
         ListTile(
           leading: const Icon(Icons.account_balance_outlined),
           title: const Text('Payments'),
-          onTap: () {
-            //Navigator.of(context).pushNamed(AddTaskPage.id);
-          },
+          onTap: () {},
         ),
         ListTile(
           leading: const Icon(Icons.settings_suggest_outlined),
           title: const Text('Settings'),
-          onTap: () {
-            //Navigator.of(context).pushNamed(AddTaskPage.id);
-          },
+          onTap: () {},
         ),
         ListTile(
           leading: const Icon(Icons.share_outlined),
           title: const Text('Share the See9ja App'),
-          onTap: () {
-            //Navigator.of(context).pushNamed(AddTaskPage.id);
-          },
+          onTap: () {},
         ),
         ListTile(
           leading: const Icon(Icons.logout_outlined),
           title: const Text('Log out'),
-          onTap: () {
-            //Navigator.of(context).pushNamed(AddTaskPage.id);
-          },
+          onTap: () {},
         ),
         const Divider(),
         ListTile(
           title: const Text('Contact Us'),
-          onTap: () {
-            //Navigator.of(context).pushNamed(AddTaskPage.id);
-          },
+          onTap: () {},
         ),
       ],
     ),

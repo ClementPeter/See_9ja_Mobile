@@ -87,22 +87,18 @@ class _IntroState extends State<Intro> {
             },
             children: [
               ChildWidget(
-                // image: Image(image: image)
-                //image: Image.asset('assets/images/image1.png'),
                 number: ScreenNumber.first,
                 description: "Explore Nigeria With Us",
                 subDescription:
                     "Check out different attraction centres in \n Nigeria and decide where you’ll like to visit",
               ),
               ChildWidget(
-                // image: Image.asset('assets/images/image2.png'),
                 number: ScreenNumber.second,
                 description: "Discover Beautiful Places",
                 subDescription:
                     "Go sight-seeing and discover different \n natural and man-made attraction sites",
               ),
               ChildWidget(
-                // image: Image.asset('assets/images/image3.png'),
                 number: ScreenNumber.third,
                 description: "Google Maps Coordination ",
                 subDescription:
@@ -149,15 +145,11 @@ class _IntroState extends State<Intro> {
                           ),
                           decoration: BoxDecoration(
                             color: green,
-                            //color: status == false ? primaryColor : grey,
                             borderRadius: BorderRadius.circular(8),
                           ),
                         ),
                         onTap: () {
-                          //Navigator.pushNamed(context, LoginScreen.id);
-                          //print('Login');
                           PageNavigator(ctx: context).nextPage(
-                            // page: const LoginPage(),
                             page: LoginScreen(),
                           );
                         },

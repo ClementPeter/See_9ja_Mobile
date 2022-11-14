@@ -1,14 +1,3 @@
-// // import 'package:flutter/material.dart';
-
-// // class AssistantPage extends StatelessWidget {
-// //   const AssistantPage({super.key});
-
-// //   @override
-// //   Widget build(BuildContext context) {
-// //     return Container();
-// //   }
-// // }
-
 import 'package:flutter/material.dart';
 import 'package:flutter_tawk/flutter_tawk.dart';
 import 'package:see_9ja/constants.dart';
@@ -25,7 +14,6 @@ class AssistantPage extends StatelessWidget {
           'See9ja Support',
           style: TextStyle(color: lightGreen),
         ),
-        //backgroundColor: const Color(0XFFF7931E),
         elevation: 0,
       ),
       body: Tawk(
@@ -39,7 +27,7 @@ class AssistantPage extends StatelessWidget {
           print('Hello Tawk!');
         },
         onLinkTap: (String url) {
-           print(url);
+          print(url);
         },
         placeholder: Center(
           child: CircularProgressIndicator(

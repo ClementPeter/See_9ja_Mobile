@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:see_9ja/constants.dart';
 
-//Custom Built TextField
-
-//Custom Textfield tha buld a textfield with essential features
+//Custom Textfield that builds a textfield with essential features
 Widget customTextField({
   String? title,
   String? hint,
@@ -33,7 +31,6 @@ Widget customTextField({
           maxLines: maxLines,
           decoration: InputDecoration(hintText: hint, border: InputBorder.none),
         ),
-        // decoration: ,
       ),
     ],
   );
