@@ -18,7 +18,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## 💻 Description
 
--  See9ja app Mobile Application to showcase a simple,stylish and efficient way in providing solution to the tourism and travel ecosystem in Nigeira 
+-  See9ja Mobile Application to showcase a simple,stylish and efficient way in providing solution to the tourism and travel ecosystem in Nigeira 
 
 ## 💻 Codebase Description
 
