@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:see_9ja/styles/colors.dart';
-//import 'package:todo_provider_rest_api/styles/colors.dart';
+import 'package:see_9ja/constants.dart';
 
 //Custom Button for login and register with named parameters that returns a Gesture Detector
 //tap : Navigate to next page

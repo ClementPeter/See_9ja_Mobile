@@ -1,22 +1,20 @@
+//import 'dart:io';
 import 'package:flutter/material.dart';
 //import 'package:auth_buttons/auth_buttons.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-import 'package:see_9ja/styles/colors.dart';
+//import 'package:google_fonts/google_fonts.dart';
+//import 'package:flutter_svg/flutter_svg.dart';
+import 'package:see_9ja/constants.dart';
 import 'package:see_9ja/screens/dashboard/dashboard.dart';
 
 import 'package:see_9ja/utils/router.dart';
 
-// import 'dart:io';
-
-//import 'package:box_ui/box_ui.dart';
+//Register user UI
 
 class RegisterScreen extends StatelessWidget {
-  //
   static String id = "Register_screen";
 
   RegisterScreen({Key? key}) : super(key: key);
-  
+
   // final bool busy;
 
   // const RegisterScreen({
@@ -36,7 +34,6 @@ class RegisterScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: ListView(
-          // physics: ScrollPhysics.,
           children: [
             //Actually there is really no need for a back button nowadays/....andriod UI would do its job
             // IconButton(
@@ -51,46 +48,46 @@ class RegisterScreen extends StatelessWidget {
             //     Navigator.pop(context);
             //   },
             // ),
-            Text(
+            const Text(
               "Register",
-              // style: TextStyle(
-              //   fontSize: 30.0,
-              //   fontWeight: FontWeight.w500,
-              // ),
-              style: GoogleFonts.poppins(
-                textStyle: const TextStyle(
-                  //color: Color(0XFFFCFAFF),
-                  fontSize: 32.0,
-                  fontWeight: FontWeight.w500,
-                ),
+              style: TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.w500,
               ),
+              // style: GoogleFonts.poppins(
+              //   textStyle: const TextStyle(
+              //     //color: Color(0XFFFCFAFF),
+              //     fontSize: 32.0,
+              //     fontWeight: FontWeight.w500,
+              //   ),
+              // ),
             ),
-            const SizedBox(height: 10.0),
-            Align(
+            const SizedBox(height: 30.0),
+            const Align(
               alignment: Alignment.centerLeft,
               child: SizedBox(
                 width: 400.0,
                 child: Text(
                   'Kindly fill in your details',
-                  // style: TextStyle(
-                  //   fontSize: 15.0,
-                  //   //fontWeight: FontWeight.w400,
-                  // ),
-                  style: GoogleFonts.poppins(
-                    textStyle: const TextStyle(
-                        //color: Color(0XFFFCFAFF),
-                        fontSize: 12.0,
-                        fontWeight: FontWeight.w400),
+                  style: TextStyle(
+                    fontSize: 15.0,
                   ),
+                  // style: GoogleFonts.poppins(
+                  //   textStyle: const TextStyle(
+                  //     //color: Color(0XFFFCFAFF),
+                  //     fontSize: 12.0,
+                  //     fontWeight: FontWeight.w400,
+                  //   ),
+                  // ),
                 ),
               ),
             ),
-            //NAME SECTION
+            //USERNAME SECTION
             const SizedBox(height: 18.0),
             TextField(
               controller: _nameController,
               decoration: InputDecoration(
-                hintText: 'username',
+                hintText: 'Username',
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10.0),
                   borderSide: BorderSide(color: grey),
@@ -120,11 +117,9 @@ class RegisterScreen extends StatelessWidget {
                 ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10.0),
-                  //borderSide:  BorderSide(
                 ),
               ),
             ),
-
             const SizedBox(height: 18.0),
             //PASSWORD SECTION
             TextField(
@@ -141,17 +136,15 @@ class RegisterScreen extends StatelessWidget {
                 ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10.0),
-                  //borderSide:  BorderSide(
                 ),
               ),
             ),
             const SizedBox(height: 80.0),
-
+            //Register Button
             GestureDetector(
               onTap: () {
                 PageNavigator(ctx: context).nextPage(page: Dashboard());
               },
-              //onTap: onMainButtonTapped,
               child: Container(
                 width: double.infinity,
                 height: 50,
@@ -160,13 +153,7 @@ class RegisterScreen extends StatelessWidget {
                   color: green,
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child:
-                    //  busy
-                    //     ? CircularProgressIndicator(
-                    //         valueColor: AlwaysStoppedAnimation(Colors.white),
-                    //       )
-                    //     :
-                    const Text(
+                child: const Text(
                   'Register',
                   style: TextStyle(
                     color: Colors.white,
@@ -177,7 +164,6 @@ class RegisterScreen extends StatelessWidget {
                 ),
               ),
             ),
-            //verticalSpaceRegular,
             const SizedBox(height: 18.0),
           ],
         ),

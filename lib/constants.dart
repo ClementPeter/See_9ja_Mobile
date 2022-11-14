@@ -16,6 +16,4 @@ Color grey = const Color(0Xff777777);
 
 Color lightGrey = const Color(0XffE9EAE5);
 
-//Color white = const Color(0XffFFFFFF);
-
 Color black = const Color(0Xff06051B);

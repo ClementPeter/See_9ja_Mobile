@@ -11,14 +11,14 @@ class ChildWidget extends StatelessWidget {
   final ScreenNumber number;
   final String description;
   final String subDescription;
-  Image image;
+  //Image image;
 
   // ignore: use_key_in_widget_constructors
   ChildWidget({
     required this.number,
     required this.description,
     required this.subDescription,
-    required this.image,
+    // required this.image,
   });
 
   @override
@@ -44,9 +44,9 @@ class ChildWidget extends StatelessWidget {
             Flexible(
               //flex: 5,
               child: SizedBox(
-                height: 300,
-                width: 300,
-                child: Image.asset("images/$file.png"),
+                height: 200,
+                width: 200,
+                child: Image.asset("assets/images/$file.png"),
               ),
             ),
             //const SizedBox(height: 50.0),
@@ -57,7 +57,8 @@ class ChildWidget extends StatelessWidget {
                   // style: GoogleFonts.poppins(
                   style: const TextStyle(
                     color: Color(0XFF008B2C),
-                    fontSize: 24.0,
+                    fontFamily: "Muli",
+                    fontSize: 22.0,
                     letterSpacing: 0.5,
                   ),
                   // ),
@@ -66,7 +67,8 @@ class ChildWidget extends StatelessWidget {
                 Text(
                   subDescription,
                   style: const TextStyle(
-                    fontSize: 18.0,
+                    fontFamily: "Muli",
+                    fontSize: 16.0,
                     letterSpacing: 0.5,
                   ),
                   textAlign: TextAlign.center,

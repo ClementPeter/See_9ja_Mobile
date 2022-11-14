@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-// import '../size_config.dart';
+import 'package:flutter/material.dart';
 
 class SocalCard extends StatelessWidget {
   const SocalCard({
@@ -20,8 +18,8 @@ class SocalCard extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 10),
         padding: const EdgeInsets.all(12),
-        height: 40,
-        width: 40,
+        height: 50,
+        width: 50,
         decoration: const BoxDecoration(
           color: Color(0xFFF5F6F9),
           shape: BoxShape.circle,

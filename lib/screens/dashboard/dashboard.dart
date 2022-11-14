@@ -1,11 +1,12 @@
-import 'package:dots_indicator/dots_indicator.dart';
+//import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:see_9ja/styles/colors.dart';
+import 'package:see_9ja/constants.dart';
+import 'package:see_9ja/screens/dashboard/drawer.dart';
 import 'package:see_9ja/widgets/category_widget.dart';
 import 'package:see_9ja/widgets/nearby_places.dart';
 import 'package:see_9ja/widgets/popular_places.dart';
-import 'package:see_9ja/widgets/text_field.dart';
-import 'package:dots_indicator/dots_indicator.dart';
+//import 'package:see_9ja/widgets/text_field.dart';
+//mport 'package:dots_indicator/dots_indicator.dart';
 // import 'package:todo_provider_rest_api/providers/auth_provider/auth_provider.dart';
 // import 'package:todo_provider_rest_api/providers/database/database_provider.dart';
 
@@ -28,108 +29,9 @@ class Dashboard extends StatelessWidget {
       // backgroundColor: const Color(0XFFFCFAFF),
 
       //backgroundColor: green,
-
       //App drawer Section containing ListTiles
       drawer: SafeArea(
-        child: Drawer(
-          child: ListView(
-            children: [
-              Container(
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      const SizedBox(height: 30),
-                      CircleAvatar(backgroundColor: green),
-                      const Text(
-                        'Odunayo Joshua',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const Text('@odun_josh24'),
-                      const SizedBox(height: 30),
-                    ]),
-                decoration: BoxDecoration(
-                  // borderRadius: BorderRadius.circular(12),
-                  color: lightGrey,
-                ),
-              ),
-              ListTile(
-                leading: const Icon(Icons.account_box_outlined),
-                title: const Text('Profile'),
-                selectedTileColor: lightGreen,
-                onTap: () {
-                  //Navigator.of(context).pushNamed(AddTaskPage.id);
-                },
-              ),
-              ListTile(
-                leading: const Icon(Icons.bookmark_added_outlined),
-                title: const Text('Discover'),
-                onTap: () {
-                  // databaseProvider.logOut(context);
-                  //AuthProvider.of(context).logout();
-                },
-              ),
-              ListTile(
-                leading: const Icon(Icons.near_me_outlined),
-                title: const Text('Saved Places'),
-                onTap: () {
-                  //Navigator.of(context).pushNamed(AddTaskPage.id);
-                },
-              ),
-              ListTile(
-                leading: const Icon(Icons.restore_outlined),
-                title: const Text('Recently Viewed'),
-                onTap: () {
-                  //Navigator.of(context).pushNamed(AddTaskPage.id);
-                },
-              ),
-              ListTile(
-                leading: const Icon(Icons.account_balance_outlined),
-                title: const Text('Payment History'),
-                onTap: () {
-                  //Navigator.of(context).pushNamed(AddTaskPage.id);
-                },
-              ),
-              ListTile(
-                leading: const Icon(Icons.settings_suggest_outlined),
-                title: const Text('Settings'),
-                onTap: () {
-                  //Navigator.of(context).pushNamed(AddTaskPage.id);
-                },
-              ),
-              ListTile(
-                leading: const Icon(Icons.share_outlined),
-                title: const Text('Share the See9ja App'),
-                onTap: () {
-                  //Navigator.of(context).pushNamed(AddTaskPage.id);
-                },
-              ),
-              ListTile(
-                leading: const Icon(Icons.logout_outlined),
-                title: const Text('Log out'),
-                onTap: () {
-                  //Navigator.of(context).pushNamed(AddTaskPage.id);
-                },
-              ),
-              Divider(),
-              ListTile(
-                title: const Text('Help and Support'),
-                onTap: () {
-                  //Navigator.of(context).pushNamed(AddTaskPage.id);
-                },
-              ),
-              Divider(),
-              ListTile(
-                title: const Text('Contact us'),
-                onTap: () {
-                  //Navigator.of(context).pushNamed(AddTaskPage.id);
-                },
-              ),
-            ],
-          ),
-        ),
+        child: drawer(context),
       ),
       //Custom AppBar section to be refactore to singe widget later
       appBar: AppBar(
@@ -170,13 +72,13 @@ class Dashboard extends StatelessWidget {
           scrollDirection: Axis.vertical,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Hello, Odunayo',
+                    'Hello, Pelumi',
                     style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
@@ -197,9 +99,24 @@ class Dashboard extends StatelessWidget {
                     height: MediaQuery.of(context).size.height * 0.2,
                     // height: MediaQuery.of(context).size.height * 0.2,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: lightGreen,
-                    ),
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.circular(15),
+                        image: const DecorationImage(
+                          image: AssetImage(
+                            "assets/images/abuja.jpg",
+                          ),
+                          fit: BoxFit.fitWidth,
+                        )
+                        //color: lightGrey,
+                        ),
+                    // decoration: BoxDecoration(
+                    //   borderRadius: BorderRadius.circular(12),
+                    //   color: lightGreen,
+                    //   image: DecorationImage(
+                    //       image: NetworkImage(
+                    //           "https://g.co/arts/6e6ziF6YLLr4wbaLA"),
+                    //       fit: BoxFit.cover),
+                    // ),
                     child: Stack(
                       children: [
                         Positioned(
@@ -207,10 +124,12 @@ class Dashboard extends StatelessWidget {
                           left: 10,
                           child: Row(
                             children: [
-                              const Icon(Icons.location_on_outlined,
-                                  color: Colors.white),
+                              const Icon(
+                                Icons.location_on_outlined,
+                                color: Colors.white,
+                              ),
                               Text(
-                                'Obudu Moutain Resort',
+                                'Abuja City Gate',
                                 style: TextStyle(
                                   color: white,
                                   fontSize: 20,
@@ -245,7 +164,7 @@ class Dashboard extends StatelessWidget {
                   //     ],
                   //   ),
                   // ),
-                  Text(
+                  const Text(
                     'Categories',
                     style: TextStyle(
                       fontSize: 20,
@@ -261,6 +180,7 @@ class Dashboard extends StatelessWidget {
                       // remove column
                       children: [
                         CategoryWidget(
+                          image: const AssetImage("assets/images/resort.jpg"),
                           key: key,
                           category: "Resort",
                           color: green,
@@ -269,26 +189,38 @@ class Dashboard extends StatelessWidget {
                         const SizedBox(height: 10.0),
                         CategoryWidget(
                           key: key,
+                          image: const AssetImage("assets/images/museum.jpg"),
+
                           category: "Museum",
                           color: grey,
                           onPressed: () {}, //Goes to place view page
                         ),
-                        // const SizedBox(height: 10.0),
                         CategoryWidget(
                           key: key,
-                          category: "Beach",
+                          image: const AssetImage("assets/images/festival.png"),
+                          category: "Festivals",
+                          color: green,
+                          onPressed: () {}, //Goes to tour view page
+                        ),
+                        const SizedBox(height: 10.0),
+                        CategoryWidget(
+                          key: key,
+                          image: const AssetImage("assets/images/beach.jpg"),
+                          category: "Beaches",
                           color: green,
                           onPressed: () {}, //Goes to tour view page
                         ),
                         //const SizedBox(height: 10.0),
+                        // CategoryWidget(
+                        //   key: key,
+                        //    image: AssetImage("assets/images/mountainss.jpg"),
+                        //   category: "Mountain",
+                        //   color: grey,
+                        //   onPressed: () {}, //Goes to tour view page
+                        // ),
                         CategoryWidget(
                           key: key,
-                          category: "Mountain",
-                          color: grey,
-                          onPressed: () {}, //Goes to tour view page
-                        ),
-                        CategoryWidget(
-                          key: key,
+                          image: const AssetImage("assets/images/garden.jpg"),
                           category: "Gardens",
                           color: grey,
                           onPressed: () {}, //Goes to tour view page
@@ -314,54 +246,43 @@ class Dashboard extends StatelessWidget {
                       children: [
                         NearbyPlaces(
                           key: key,
-                          category: "Olumo Rock",
-                          color: green,
-                          location: "Abeikuta, state",
-                          onPressed: () {}, //Goes to tour view page
-                        ),
-                        const SizedBox(height: 10.0),
-
-                        NearbyPlaces(
-                          key: key,
-                          category: "Agbokim Waterfalls",
-                          color: green,
-                          location: "location, state",
-                          onPressed: () {}, //Goes to tour view page
-                        ),
-                        const SizedBox(height: 10.0),
-                        NearbyPlaces(
-                          key: key,
+                          image: "assets/images/zuma.jpg",
                           category: "Zuma Rock",
                           color: green,
-                          location: "location, state",
+                          location: "Madalla, Niger",
                           onPressed: () {}, //Goes to tour view page
                         ),
                         const SizedBox(height: 10.0),
                         NearbyPlaces(
                           key: key,
-                          category: "Obudu cattle ranch",
-                          color: green,
-                          location: "location, state",
+                          image: "assets/images/mosque.jpg",
+                          category: "Abuja Central Mosque",
+                          color: lightGreen,
+                          location: "FCT ,Abuja",
                           onPressed: () {}, //Goes to tour view page
                         ),
                         const SizedBox(height: 10.0),
                         NearbyPlaces(
                           key: key,
-                          category: "Zuma Rock",
-                          color: green,
-                          location: "location, state",
+                          image: "assets/images/boat.jpg",
+                          category: "Jabi Boat Club",
+                          color: lightGreen,
+                          location: "FCT ,Abuja",
                           onPressed: () {}, //Goes to tour view page
                         ),
                         const SizedBox(height: 10.0),
-
-        
+                        NearbyPlaces(
+                          key: key,
+                          image: "assets/images/aso.jpg",
+                          category: "Aso Rock",
+                          color: lightGreen,
+                          location: "FCT ,Abuja",
+                          onPressed: () {}, //Goes to tour view page
+                        ),
+                        const SizedBox(height: 10.0),
                       ],
                     ),
                   ),
-
-                  //
-                  //
-                  //
                   const SizedBox(height: 20.0),
                   //Polpuar places card
                   const Text(
@@ -379,87 +300,63 @@ class Dashboard extends StatelessWidget {
                       children: [
                         PopularPlaces(
                           key: key,
-                          category: "Resorts",
+                          image: "assets/images/obudu.jpg",
+                          attraction: "Obudu Cattle Ranch",
+                          location: "Cross River, Calabar",
                           color: green,
                           onPressed: () {}, //Goes to tour view page
                         ),
                         PopularPlaces(
                           key: key,
-                          category: "Resorts",
+                          image: "assets/images/yankari.jpg",
+                          location: "Bauchi, Bauchi",
+                          attraction: "Yankari Reserve",
                           color: green,
                           onPressed: () {}, //Goes to tour view page
                         ),
                         PopularPlaces(
                           key: key,
-                          category: "Resorts",
+                          image: "assets/images/zuma.jpg",
+                          attraction: "Zuma Rock",
+                          location: "Madalla, Niger",
                           color: green,
                           onPressed: () {}, //Goes to tour view page
                         ),
                         PopularPlaces(
                           key: key,
-                          category: "Resorts",
+                          image: "assets/images/agbokim.jpg",
+                          attraction: "Agbokim Waterfalls",
+                          location: "Cross River, Calabar",
                           color: green,
                           onPressed: () {}, //Goes to tour view page
                         ),
                         PopularPlaces(
                           key: key,
-                          category: "Resorts",
+                          image: "assets/images/yankari.jpg",
+                          location: "Bauchi, Bauchi",
+                          attraction: "Yankari Reserve",
                           color: green,
                           onPressed: () {}, //Goes to tour view page
                         ),
-
-                        ///
-                        //////
-
-                        ////
-                        ///
-                        ///
-                        ///
-                        // ///
+                        PopularPlaces(
+                          key: key,
+                          image: "assets/images/agbokim.jpg",
+                          attraction: "Agbokim Waterfalls",
+                          location: "Cross River, Calabar",
+                          color: green,
+                          onPressed: () {}, //Goes to tour view page
+                        ),
+                        PopularPlaces(
+                          key: key,
+                          image: "assets/images/aso.jpg",
+                          location: "FCT, Abuja",
+                          attraction: "Aso Rock",
+                          color: green,
+                          onPressed: () {}, //Goes to tour view page
+                        ),
                       ],
                     ),
                   ),
-                  // ListView(
-                  //   scrollDirection: Axis.horizontal,
-                  //   children: [
-                  //     const SizedBox(width: 10.0),
-                  //     Container(
-                  //       width: 100,
-                  //       decoration: const BoxDecoration(
-                  //         borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                  //       ),
-                  //     ),
-                  //     const SizedBox(width: 10.0),
-                  //     Container(
-                  //       width: 100,
-                  //       decoration: const BoxDecoration(
-                  //         borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                  //       ),
-                  //     ),
-                  //     const SizedBox(width: 10.0),
-                  //     Container(
-                  //       width: 100,
-                  //       decoration: const BoxDecoration(
-                  //         borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                  //       ),
-                  //     ),
-                  //     const SizedBox(width: 10.0),
-                  //     Container(
-                  //       width: 100,
-                  //       decoration: const BoxDecoration(
-                  //         borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                  //       ),
-                  //     ),
-                  //     const SizedBox(width: 10.0),
-                  //     Container(
-                  //       width: 100,
-                  //       decoration: const BoxDecoration(
-                  //         borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                  //       ),
-                  //     ),
-                  //     const SizedBox(width: 10.0),
-                  //   ],
-                  // ),
                 ],
               ),
             ),

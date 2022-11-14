@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:see_9ja/screens/authentication/login.dart';
-import 'package:see_9ja/styles/colors.dart';
-import 'package:see_9ja/screens/views/pageView.dart';
+import 'package:see_9ja/constants.dart';
+import 'package:see_9ja/screens/intro/pageview.dart';
 import 'package:see_9ja/utils/router.dart';
-import 'package:see_9ja/screens/authentication/sign_in.dart';
 
 //Intro Screen shows a Page View of different tourist attraction and their brief
 class Intro extends StatefulWidget {
@@ -30,11 +29,9 @@ class _IntroState extends State<Intro> {
 
   //
   bool isLast = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: Colors.transparent,
       backgroundColor: const Color(0XFFFCFAFF),
       appBar: AppBar(
         actions: [
@@ -46,12 +43,11 @@ class _IntroState extends State<Intro> {
                 curve: Curves.linear,
               );
               _pageController.jumpToPage(_currentIndex = 3);
-              print('Skip');
             },
             child: Padding(
               padding: const EdgeInsets.only(top: 10.0, right: 20.0),
+              //Skip Button
               child: Container(
-                //height: 3.0,
                 width: 80.0,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -62,7 +58,11 @@ class _IntroState extends State<Intro> {
                       // ),
                     ),
                     SizedBox(width: 5.0),
-                    Icon(Icons.arrow_forward_ios, size: 12.0),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      size: 12.0,
+                      color: Colors.white,
+                    ),
                   ],
                 ),
                 decoration: BoxDecoration(
@@ -76,7 +76,6 @@ class _IntroState extends State<Intro> {
         backgroundColor: Colors.transparent,
         elevation: 0.0,
       ),
-
       body: Stack(
         children: [
           PageView(
@@ -88,28 +87,29 @@ class _IntroState extends State<Intro> {
             },
             children: [
               ChildWidget(
-                  // image: Image(image: image)
-                  image: Image.asset('images/image1.png'),
-                  number: ScreenNumber.first,
-                  description: "Explore Nigeria With Us",
-                  subDescription:
-                      "Check out different attraction centres in \n Nigeria and decide where you’ll like to visit"),
+                // image: Image(image: image)
+                //image: Image.asset('assets/images/image1.png'),
+                number: ScreenNumber.first,
+                description: "Explore Nigeria With Us",
+                subDescription:
+                    "Check out different attraction centres in \n Nigeria and decide where you’ll like to visit",
+              ),
               ChildWidget(
-                image: Image.asset('images/image2.png'),
+                // image: Image.asset('assets/images/image2.png'),
                 number: ScreenNumber.second,
                 description: "Discover Beautiful Places",
                 subDescription:
                     "Go sight-seeing and discover different \n natural and man-made attraction sites",
               ),
               ChildWidget(
-                image: Image.asset('images/image3.png'),
+                // image: Image.asset('assets/images/image3.png'),
                 number: ScreenNumber.third,
                 description: "Google Maps Coordination ",
                 subDescription:
                     "Get clear and concise directions with the \n Google Maps Coordination",
               ),
               ChildWidget(
-                image: Image.asset('images/image4.png'),
+                // image: Image.asset('assets/images/image4.png'),
                 number: ScreenNumber.fourth,
                 description: "Connect With Other Tourists",
                 subDescription:
@@ -117,10 +117,9 @@ class _IntroState extends State<Intro> {
               ),
             ],
           ),
+          const SizedBox(height: 10),
           Padding(
-            padding: const EdgeInsets.only(
-                //top: 5.0,
-                ),
+            padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -135,36 +134,9 @@ class _IntroState extends State<Intro> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(
-                      top: 20, left: 50, right: 50, bottom: 30.0),
+                      top: 10, left: 50, right: 50, bottom: 20.0),
                   child: Column(
                     children: [
-                      // GestureDetector(
-                      //   onTap: () {
-                      //     print('Sign up');
-                      //     print('GO TO REG SCREEN');
-                      //     //Navigator.pushNamed(context, RegistrationScreen.id);
-                      //   },
-                      //   child: Container(
-                      //     height: 44.0,
-                      //     child: const Center(
-                      //       child: Text(
-                      //         "Register",
-                      //         // style: GoogleFonts.poppins(
-                      //         //   textStyle: TextStyle(
-                      //         //       color: Color(0XFFFCFAFF),
-                      //         //       fontSize: 16.0,
-                      //         //       fontWeight: FontWeight.w500),
-                      //         // ),
-                      //       ),
-                      //     ),
-                      //     decoration: const BoxDecoration(
-                      //       color: Colors.teal,
-                      //       borderRadius: BorderRadius.all(
-                      //         Radius.circular(15.0),
-                      //       ),
-                      //     ),
-                      //   ),
-                      // ),
                       const SizedBox(height: 20.0),
                       GestureDetector(
                         child: Container(
@@ -183,7 +155,7 @@ class _IntroState extends State<Intro> {
                         ),
                         onTap: () {
                           //Navigator.pushNamed(context, LoginScreen.id);
-                          print(' Login');
+                          //print('Login');
                           PageNavigator(ctx: context).nextPage(
                             // page: const LoginPage(),
                             page: LoginScreen(),

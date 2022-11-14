@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:see_9ja/styles/colors.dart';
-//import 'package:todo_provider_rest_api/styles/colors.dart';
+import 'package:see_9ja/constants.dart';
 
 //Custom Built TextField
-// Null Safety Tips - ? after the datatype indicates the varialble can accept null
-//                  - !  after the variable name indicates that variable is a nullable one and can accept null or could be potentialy null
+
 //Custom Textfield tha buld a textfield with essential features
 Widget customTextField({
   String? title,
@@ -25,7 +23,6 @@ Widget customTextField({
       //TextField Section
       Container(
         alignment: Alignment.centerLeft,
-
         padding: const EdgeInsets.symmetric(horizontal: 10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
