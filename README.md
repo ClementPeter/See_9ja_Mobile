@@ -18,22 +18,20 @@ samples, guidance on mobile development, and a full API reference.
 
 ## 💻 Description
 
-- A Mobile Application to showcase my Resume built with flutter , this app was built as a solution to HNG STAGE 2 and has been built ; The main aim of building this is to show essential information about the developer portfolio i.e Bio, social media and what the developer can bring to the table
-
+-  See9ja app Mobile Application to showcase a simple,stylish and efficient way in providing solution to the tourism and travel ecosystem in Nigeira 
 
 ## 💻 Codebase Description
 
 - The Codebase was modularized into various subfolders to keep the codebase organize...Various subfolders and the individual files includes :
 
-> screens  : homepage.dart, splash.dart : Contains Codebase for App interface
+> screens  : Intro, profile, favorite, discover, dashboard,commute,authentication,tour assistant
 
-> components : project_cards.dart, social card.dart tool_card.dart : Contains codebase to structure custom component used through our App
+> Models : discover model favorite model : Contains codebase to structure Auto generated component used through our App
+
+
+> Utils : router, snackbar message : Contains codebase for routing used through our App and showing snack bar
 
 > assets : contains imaages and custom font that were used in the app
-
-> l10n : Contains the arb files used for localization
-
-> Design concept : "ME" 🙂 
 
 
 ## ✨ Features in the App
