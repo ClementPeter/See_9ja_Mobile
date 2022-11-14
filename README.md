@@ -31,7 +31,13 @@ samples, guidance on mobile development, and a full API reference.
 
 > Utils : router, snackbar message : Contains codebase for routing used through our App and showing snack bar
 
-> assets : contains imaages and custom font that were used in the app
+> Widgets : button,category, nearby,popular places, social cards star rating, search textfield, snackbar message : Contains codebase for routing used through our App and showing snack bar
+
+> constant : contains color styles
+
+> theme : contains custom App theme setting styles
+
+> assets : contains images and custom font that were used in the app
 
 
 ## ✨ Features in the App
@@ -45,7 +51,7 @@ samples, guidance on mobile development, and a full API reference.
 
 | Name                                                    | Usage                                               |
 | ------------------------------------------------------- | --------------------------------------------------- |
-| [**Firebase **](https://pub.dev/packages/avatar_glow)       | For User Authentication wth Firebase                             |
+| [**Firebase **](https://pub.dev/packages/avatar_glow)       | For User Authentication with Firebase                             |
 | [**Geolocator **](https://pub.dev/packages/geolocator)     |  For Getting User location with the devices    |
 | [**Webview **](https://pub.dev/packages/geolocator)     |  For Intergratin 3rd Party Applications  |
 
