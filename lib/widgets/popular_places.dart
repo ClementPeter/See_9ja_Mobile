@@ -21,7 +21,7 @@ class PopularPlaces extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: () {},
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10.0),

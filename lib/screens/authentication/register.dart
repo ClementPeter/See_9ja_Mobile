@@ -44,6 +44,7 @@ class RegisterScreen extends StatelessWidget {
             const SizedBox(height: 18.0),
             TextField(
               controller: _nameController,
+              cursorColor: green,
               decoration: InputDecoration(
                 hintText: 'Username',
                 enabledBorder: OutlineInputBorder(
@@ -62,6 +63,7 @@ class RegisterScreen extends StatelessWidget {
             const SizedBox(height: 18.0),
             TextField(
               controller: _emailController,
+              cursorColor: green,
               decoration: InputDecoration(
                 hintText: 'Email',
                 enabledBorder: OutlineInputBorder(

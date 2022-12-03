@@ -6,7 +6,7 @@ import 'package:see_9ja/screens/commute/commute.dart';
 import 'package:see_9ja/screens/discover/discover.dart';
 import 'package:see_9ja/screens/favourite/favourite.dart';
 import 'package:see_9ja/screens/profile/profile.dart';
-import '../../utils/router.dart';
+import '../../../utils/router.dart';
 
 Drawer drawer(BuildContext context) {
   return Drawer(

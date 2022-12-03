@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:see_9ja/constants.dart';
-import 'package:see_9ja/screens/dashboard/drawer.dart';
+import 'package:see_9ja/screens/dashboard/component/drawer.dart';
 import 'package:see_9ja/widgets/category_widget.dart';
 import 'package:see_9ja/widgets/nearby_places.dart';
 import 'package:see_9ja/widgets/popular_places.dart';
+import 'component/user_geolocation.dart';
 
 class Dashboard extends StatelessWidget {
   static String id = "Dashboard";
@@ -22,7 +23,7 @@ class Dashboard extends StatelessWidget {
       ),
       appBar: AppBar(
         iconTheme: IconThemeData(color: green),
-        backgroundColor: const Color(0XFFFCFAFF),
+        // backgroundColor: const Color(0XFFFCFAFF),
         elevation: 0,
         title: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20),
@@ -74,43 +75,8 @@ class Dashboard extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10.0),
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height * 0.2,
-                    decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.circular(15),
-                        image: const DecorationImage(
-                          image: AssetImage(
-                            "assets/images/abuja.jpg",
-                          ),
-                          fit: BoxFit.fitWidth,
-                        )),
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          bottom: 10,
-                          left: 10,
-                          child: Row(
-                            children: [
-                              const Icon(
-                                Icons.location_on_outlined,
-                                color: Colors.white,
-                              ),
-                              Text(
-                                'Abuja City Gate',
-                                style: TextStyle(
-                                  color: white,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  // TODO: implement User Geolocation functionality
+                  const UserGeolocation(),
                   const SizedBox(height: 20.0),
                   const Text(
                     'Categories',

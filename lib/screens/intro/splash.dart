@@ -20,21 +20,23 @@ class _SplashScreenState extends State<SplashScreen> {
   //Splash Screen
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Container(
-          decoration: const BoxDecoration(
-            color: Color(0XFFFCFAFF),
-          ),
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'assets/images/see9ja.png',
-                  width: 250,
-                  height: 250,
-                ),
-              ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Container(
+            decoration: const BoxDecoration(
+              color: Color(0XFFFCFAFF),
+            ),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/images/see9ja.png',
+                    width: 250,
+                    height: 250,
+                  ),
+                ],
+              ),
             ),
           ),
         ),

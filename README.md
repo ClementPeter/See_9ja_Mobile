@@ -57,7 +57,7 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
-### Ap Screen Shots
+### App Screen Shots
 
 
 ![1](https://user-images.githubusercontent.com/61213263/201655290-4a9bf78e-3540-4943-b5b5-5e700b065c6b.jpg)
