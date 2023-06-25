@@ -38,7 +38,7 @@ class Profile extends StatelessWidget {
                       title: Padding(
                         padding: const EdgeInsets.only(top: 20.0),
                         child: Text('Pelumi Johnson',
-                            style: Theme.of(context).textTheme.headline6),
+                            style: Theme.of(context).textTheme.titleLarge),
                       ),
                       subtitle: Padding(
                         padding: const EdgeInsets.only(top: 5.0, bottom: 20.0),
@@ -46,9 +46,7 @@ class Profile extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
                             Text('@pelumi_j',
-                                style: Theme.of(context).textTheme.subtitle1),
-                            // Text('SideHustle Cohort 4',
-                            //     style: Theme.of(context).textTheme.caption),
+                                style: Theme.of(context).textTheme.titleMedium),
                           ],
                         ),
                       ),
@@ -56,7 +54,7 @@ class Profile extends StatelessWidget {
                   ),
                   const Padding(
                     padding: EdgeInsets.fromLTRB(10.0, 15.0, 10.0, 10.0),
-                    child:  Text('General',
+                    child: Text('General',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 18.0)),
                   ),
@@ -109,7 +107,7 @@ class Profile extends StatelessWidget {
                             Icons.add_circle_outline,
                             color: green,
                           ),
-                          title: const  Text('Tour Goals'),
+                          title: const Text('Tour Goals'),
                           trailing: const Icon(Icons.navigate_next),
                         ),
                       ),
