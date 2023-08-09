@@ -53,7 +53,7 @@ samples, guidance on mobile development, and a full API reference.
 | ------------------------------------------------------- | --------------------------------------------------- |
 | [**Firebase **](https://pub.dev/packages/avatar_glow)       | For User Authentication with Firebase                             |
 | [**Geolocator **](https://pub.dev/packages/geolocator)     |  For Getting User location with the devices    |
-| [**Webview **](https://pub.dev/packages/geolocator)     |  For Intergratin 3rd Party Applications  |
+| [**Webview **](https://pub.dev/packages/webview_flutter)     |  For Intergratin 3rd Party Applications  |
 
 
 
